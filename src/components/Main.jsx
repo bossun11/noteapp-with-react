@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import "../styles/Main.css";
 
 const Main = ({ getActiveNote, onUpdatedNote }) => {
@@ -31,7 +32,9 @@ const Main = ({ getActiveNote, onUpdatedNote }) => {
       </div>
       <div className="app-main-note-preview">
         <h1 className="preview-title">{getActiveNote.title}</h1>
-        <div className="markdown-preview">{getActiveNote.content}</div>
+        <ReactMarkdown className="markdown-preview">
+          {getActiveNote.content}
+        </ReactMarkdown>
       </div>
     </div>
   );
