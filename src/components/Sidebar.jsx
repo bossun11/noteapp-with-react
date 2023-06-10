@@ -19,7 +19,7 @@ const Sidebar = ({
           return (
             <div
               className={`app-sidebar-note ${
-                note.id === activeNote && "active"
+                note.id === activeNote ? "active" : ""
               }`}
               key={note.id}
               onClick={() => setActiveNote(note.id)}
